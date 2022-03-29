@@ -1,6 +1,8 @@
 <template>
-  <h1>Hello World !</h1>
-  <button class="btn btn-primary" @click="show = !show"></button>
+  <div class="p-20">
+    <button class="btn btn-primary" @click="show = !show">Display</button>
+    <h1 v-if="show">Hello World !</h1>
+  </div>
 </template>
 
 <script setup lang="ts">
