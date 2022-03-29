@@ -1,17 +1,12 @@
 <template>
-  <h1>{{ $greeting('Jean') }}</h1>
-  <input v-focus="{ firstFocus: true, color: 'green' }" type="text" />
-
-  <div>
-    <FancyButton />
-  </div>
+  <h1>Hello World !</h1>
+  <button class="btn btn-primary" @click="show = !show"></button>
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue';
-import { symGreeting } from './shared/plugins/examplePlugin';
-const greeting = inject(symGreeting);
-console.log(greeting('Paul'));
+import { ref } from 'vue';
+
+const show = ref(false);
 </script>
 
 <style lang="scss">
